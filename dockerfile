@@ -10,3 +10,6 @@ RUN apt-get install -y ethereum
 COPY node1 node1
 COPY node2 node2
 COPY genesis genesis
+
+RUN geth init --datadir node1 genesis/arcada_iot.json
+RUN geth init --datadir node2 genesis/arcada_iot.json
