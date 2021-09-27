@@ -7,5 +7,6 @@ RUN add-apt-repository -y ppa:ethereum/ethereum
 RUN apt-get update -y
 RUN apt-get install -y ethereum
 
-COPY keystore keystore
+COPY node1 node1
+COPY node2 node2
 COPY genesis genesis
