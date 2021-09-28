@@ -28,6 +28,9 @@ services:
     image: geth-docker-node3-rpc
     networks:
       - bridged-network-1
+    ports:
+      - "8545:8545/tcp"
+      - "8546:8546/tcp"
     restart: always
 
 networks:
