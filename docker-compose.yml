@@ -1,0 +1,35 @@
+version: "3.9"
+    
+services:
+  node1:
+    build:
+      context: ./node1-bootnode
+    networks:
+      - bridged-network-1
+    image: geth-docker-node1-bootnode
+    restart: always
+
+  node2:
+    depends_on:
+      - node1
+    build:
+      context: ./node2-miner
+    networks:
+      - bridged-network-1
+    image: geth-docker-node2-miner
+    restart: always
+    
+  node3:
+    depends_on:
+      - node1
+      - node2
+    build:
+      context: ./node3-rpc
+    networks:
+      - bridged-network-1
+    image: geth-docker-node3-rpc
+    restart: always
+
+networks:
+  bridged-network-1:
+    driver: bridge
