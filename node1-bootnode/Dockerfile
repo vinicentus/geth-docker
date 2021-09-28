@@ -7,6 +7,6 @@ RUN add-apt-repository -y ppa:ethereum/ethereum
 RUN apt-get update -y
 RUN apt-get install -y ethereum
 
-COPY node3 node3
+COPY node1 node1
 
-CMD bootnode -nodekey node3/keystore/bootnode.key
+CMD bootnode -nodekey node1/keystore/bootnode.key
