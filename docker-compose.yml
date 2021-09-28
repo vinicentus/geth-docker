@@ -4,9 +4,9 @@ services:
   node1-bootnode:
     build:
       context: ./node1-bootnode
+    image: geth-docker-node1-bootnode
     networks:
       - bridged-network-1
-    image: geth-docker-node1-bootnode
     restart: always
 
   node2-miner:
@@ -14,9 +14,9 @@ services:
       - node1-bootnode
     build:
       context: ./node2-miner
+    image: geth-docker-node2-miner
     networks:
       - bridged-network-1
-    image: geth-docker-node2-miner
     restart: always
     
   node3-rpc:
@@ -25,9 +25,9 @@ services:
       - node2-miner
     build:
       context: ./node3-rpc
+    image: geth-docker-node3-rpc
     networks:
       - bridged-network-1
-    image: geth-docker-node3-rpc
     restart: always
 
 networks:
