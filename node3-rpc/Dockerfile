@@ -17,7 +17,6 @@ CMD geth \
     --networkid 5767 \
     --syncmode full \
     --maxpeers 2 \
-    --port 30304 \
     --http \
     --http.port 8545 \
     --http.api personal,eth,net,web3
