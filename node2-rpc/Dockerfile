@@ -16,7 +16,6 @@ CMD geth \
     --datadir node2 \
     --networkid 5767 \
     --syncmode full \
-    --nodiscover \
     --maxpeers 2 \
     --port 30304 \
     --http \
