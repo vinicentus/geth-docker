@@ -1,0 +1,30 @@
+version: "3.9"
+    
+services:
+  node4-contract-deployment:
+    build:
+      context: ./node4-contract-deployment
+    image: geth-docker-node4-contract-deployment
+    networks:
+      - bridged-network-1
+    restart: "no"
+  
+  truffle-docker:
+    depend_on:
+      - node4-contract-deployment
+    build:
+      context: ./truffle-docker
+    image: truffle-docker
+    networks:
+      - bridged-network-1
+    restart: "no"
+    volumes:
+      - type: bind
+        # TODO: change according to your environment
+        source: /home/langstvi/git-repos/oracle-manager
+        target: /project
+
+networks:
+  bridged-network-1:
+    external: true
+    name: geth-docker_bridged-network-1
