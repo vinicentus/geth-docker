@@ -1,0 +1,17 @@
+version: "3.9"
+    
+services:
+  node4-contract-deployment:
+    build:
+      context: .
+    image: geth-docker-node4-contract-deployment
+    networks:
+      - bridged-network-1
+    ports:
+      - "8550:8550/tcp"
+    restart: "no"
+
+networks:
+  bridged-network-1:
+    external: true
+    name: geth-docker_bridged-network-1

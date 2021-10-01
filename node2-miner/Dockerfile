@@ -9,7 +9,7 @@ CMD geth \
     --datadir node2 \
     --networkid 11865 \
     --syncmode full \
-    --maxpeers 2 \
+    --maxpeers 3 \
     --password node2/keystore/password.txt \
     --unlock 0903890340de53dad6bfeea0d098178fc3300f45 \
     --mine
