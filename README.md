@@ -10,7 +10,7 @@ _Node3_ is a relatively secure JsonRPC endpoint, accepting bot webcoskt and http
 It does not need a key, as any user connecting to it will manage their own keys.
 This container serves as the only way to get external transactions on to the network.
 
-_Node4_ is a special node, that is used only when deplying smart contracts. It contains a key that it uses to sign the deployment transactions.
+_Node4_ is a special JsonRPC node, that is used only when deplying smart contracts. It contains a key that it uses to sign the deployment transactions.
 This should only be running while deploying contracts, and can be started by running `docker-compose up` from inside its directory.
 
 All the other nodes are started at the same time by running `docker-compsoe up` in the main directory.
