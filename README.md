@@ -13,10 +13,10 @@ This container serves as the only way to get external transactions on to the net
 [node4-contract-deployment](node4-contract-deployment) is a special JsonRPC node, that is used only when deplying smart contracts. It contains a key that it uses to sign the deployment transactions.
 This should only be running while deploying contracts, and can be started by running `docker-compose up` from inside its directory.
 
-All the other nodes are started at the same time by running `docker-compsoe up` in the main directory.
+All the other nodes are started at the same time by running `docker-compose up` in the main directory.
 
 ## Dependencies
-Thsi repository depends on docker and docker-compose to be installed.
+This repository depends on docker and docker-compose to be installed.
 
 ## Security and keys
 You SHOULD generate your own keys and place them inside the docker keystore folder! Default keys are provided in order for this to run without any configuration, but these should not be used in a production environment.
