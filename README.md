@@ -6,7 +6,7 @@ _Node1_ is a bootnode and used by the other nodes in the network to find each ot
 
 _Node2_ is a miner and theferoe has an associated ethereum account that it keeps unlocked during mining.
 
-_Node3_ is a relatively secure JsonRPC endpoint, accepting bot webcoskt and http connections.  
+_Node3_ is a relatively secure JsonRPC endpoint, accepting both websocket and http connections.  
 It does not need a key, as any user connecting to it will manage their own keys.
 This container serves as the only way to get external transactions on to the network.
 
