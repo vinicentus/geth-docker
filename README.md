@@ -1,6 +1,7 @@
 # geth-docker
 
 This repository contains 4 dockerfiles describing containers that together form a simple private ethereum test network.
+The network uses Proof of Authority, and only node2-miner is allowed to mine.
 
 [node1-bootnode](node1-bootnode) is a bootnode and used by the other nodes in the network to find each other.
 
@@ -17,6 +18,18 @@ All the other nodes are started at the same time by running `docker-compose up` 
 
 ## Dependencies
 This repository depends on docker and docker-compose to be installed.
+
+## How to start
+
+* from within the directory run `sudo docker-compose up`
+* after exiting with `Ctrl-C`, start the already created containers again with `sudo docker-compose start`
+
+## How to deploy contracts
+
+* `cd node4-contract-deployment`
+* `sudo docker-compose up`
+* Now deploy your contracts (for example using `truffle migrate`)
+* then shut down this container by `Ctrl-C`
 
 ## Security and keys
 You SHOULD generate your own keys and place them inside the docker keystore folder! Default keys are provided in order for this to run without any configuration, but these should not be used in a production environment.
